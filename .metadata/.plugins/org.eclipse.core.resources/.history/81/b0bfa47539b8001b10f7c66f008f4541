@@ -1,0 +1,22 @@
+package selenium.Omniful;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+import org.json.*;
+
+public class myFirstRestAssuredClass {
+	@Test(priority=1)
+	public static void getResponseBody(){
+		
+		given()
+		.param("Accept", "application/json")
+		.param("Content-Type", "application/json")
+		.param("API-KEY", "7c933729-c4a2-464b-9890-162a2a5ffd7d")
+		//.param("transactions ",transactionsObj.toString())
+		.when()
+		.post("https://osama.dashboard-omniful-stage.ibtikar.sa/api/v1/client/pos")
+		.then()
+		.log()
+		.all();
+	}
+}

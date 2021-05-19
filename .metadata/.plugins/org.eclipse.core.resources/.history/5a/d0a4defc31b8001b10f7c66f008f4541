@@ -1,0 +1,17 @@
+package selenium.Omniful;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+
+public class myFirstRestAssuredClass {
+	@Test(priority=1)
+	public static void getResponseBody(){
+		given()
+		.queryParam("transactions ","{'pos_id':7,'sku':'Fight Like a Girl Tote - Large-Dusty Pink','transaction_date':1615904223','transaction_id':3000,'quantity':-5,'return_pos_id':7,'terminal_id':119,'net_amount':500,'vat':10,'tax_amount':50,'price':20,'return_transaction_id':2}")
+		.when()
+		.post("https://osama.dashboard-omniful-stage.ibtikar.sa/api/v1/client/pos")
+		.then()
+		.log()
+		.all();
+	}
+}

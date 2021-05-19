@@ -1,0 +1,11 @@
+package selenium.Omniful;
+
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+
+public class myFirstRestAssuredClass {
+	@Test(priority=1)
+	public static void getResponseBody(){
+		get("http://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1")..then().log();
+	}
+}

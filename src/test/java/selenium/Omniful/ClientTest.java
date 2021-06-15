@@ -7,11 +7,11 @@ import org.testng.annotations.Test;
 public class ClientTest extends TestBases{
 	
 	@BeforeTest
-	public void openbrowser(){
-		OpenChrome("https://admin-stage-omniful.ibtikar.sa/");
-	}
-	@Test(priority=1)
-	     public void LoginAsSuperAdmin() throws InterruptedException{
+	public void openbrowser() {
+			OpenChrome("https://admin-demo-omniful.ibtikar.sa/");
+		}
+		@Test
+	    public void LoginAsSuperAdmin() throws InterruptedException{
 		SuperAdminLoginPage subobj=new SuperAdminLoginPage(driver);
 		subobj.superadminlogin("mostafa@omniful.com", "12345678");
 		driver.manage().window().maximize();

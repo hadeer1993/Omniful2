@@ -11,12 +11,12 @@ import selenium.Omniful.TestBases;
 public class NewDispatchingStationTest extends TestBases {
 	@BeforeTest
 	public void openbrowser() {
-		OpenChrome("https://osama.dashboard-omniful-stage.ibtikar.sa/");
+		OpenChrome(base_url);
 	}
 	@Test(priority=1)
 	public void OpenShippingMethod() throws InterruptedException {
 		ClientLoginPage clp=new ClientLoginPage(driver);
-		clp.clientLoginMethod ("asmaa0abd.elkerim@gmail.com", "123456");
+		clp.clientLoginMethod (username, password);
 		driver.manage().window().maximize();
 		Thread.sleep(10000);
 		driver.navigate().to("https://osama.dashboard-omniful-stage.ibtikar.sa/picking/dispatching-list");

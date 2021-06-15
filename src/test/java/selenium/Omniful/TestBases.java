@@ -8,6 +8,9 @@ import org.openqa.selenium.interactions.Actions;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBases {
+	    public String base_url="https://osama.dashboard-omniful-stage.ibtikar.sa/";
+	    public String username="asmaa0abd.elkerim@gmail.com";
+	    public String password="123456";
 		protected WebDriver driver;
 		public void OpenChrome(String url){
 			//System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriverr.exe");

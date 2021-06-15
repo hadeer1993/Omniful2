@@ -7,15 +7,14 @@ import org.testng.annotations.Test;
 public class CreateRoleTest extends TestBases {
 
 	@BeforeTest
-	public void Openbrowser() throws InterruptedException {
-		OpenChrome("https://asmak.dashboard-omniful-stage.ibtikar.sa/");
-		driver.manage().window().maximize();
-		Thread.sleep(10000);
+	public void openbrowser() {
+		OpenChrome(base_url);
 	}
 	@Test(priority=1)
-	public void LoginCLient() throws InterruptedException {
-		ClientLoginPage clp = new ClientLoginPage(driver);
-		clp.clientLoginMethod("asmaa0abdelkerim@gmail.com", "123456");
+	public void OpenShippingMethod() throws InterruptedException {
+		ClientLoginPage clp=new ClientLoginPage(driver);
+		clp.clientLoginMethod (username, password);
+		driver.manage().window().maximize();
 		Thread.sleep(10000);
 	}
 	@Test(priority = 2)

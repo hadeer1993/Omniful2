@@ -13,14 +13,14 @@ public class SetupMagentoTest extends TestBases {
 	}
 	@BeforeTest
 	public void openbrowser() {
-		OpenChrome("https://asmak.dashboard-omniful-stage.ibtikar.sa/");
+		OpenChrome(base_url);
 	}
 	@Test(priority=1)
-    public void LoginAsClientt() throws InterruptedException{
+	public void OpenShippingMethod() throws InterruptedException {
 		ClientLoginPage clp=new ClientLoginPage(driver);
-		clp.clientLoginMethod ("asmaa0abdelkerim@gmail.com", "123456");
-	    driver.manage().window().maximize();
-	    Thread.sleep(10000);
+		clp.clientLoginMethod (username, password);
+		driver.manage().window().maximize();
+		Thread.sleep(10000);
 }
     @Test(priority=2)
     public void OpenSideMenu() throws InterruptedException{

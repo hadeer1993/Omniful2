@@ -20,10 +20,10 @@ public class CreateUserPage extends PageBases {
 	@FindBy(id = "phone")
 	WebElement PhoneNum;
 	
-	@FindBy(id = "roles")
+	@FindBy(id="roles")
 	WebElement RoleDDL;
 	
-	@FindBy(xpath = "//div[@class=' css-1hwfws3']")
+	@FindBy(id="react-select-s2-input")
 	WebElement RoleTxt;
 	
 	@FindBy(id = "hubs")
@@ -48,9 +48,9 @@ public class CreateUserPage extends PageBases {
 		PhoneNum.sendKeys(pn);
 		
 	}
-	public void SelectRoleDDL() {
+	public void SelectRoleDDL() throws InterruptedException {
 		RoleDDL.click();
-		
+
 	}
 	public void SelectHubDDL() {
 		HubDDL.click();

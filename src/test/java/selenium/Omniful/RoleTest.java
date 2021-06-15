@@ -10,12 +10,12 @@ public class RoleTest extends TestBases{
 
 	@BeforeTest
 	public void openbrowser() {
-		OpenChrome("https://demo3.dashboard-omniful-stage.ibtikar.sa/pages/login");
+		OpenChrome(base_url);
 	}
 	@Test(priority=1)
-	public void loginclient() throws InterruptedException{
+	public void OpenShippingMethod() throws InterruptedException {
 		ClientLoginPage clp=new ClientLoginPage(driver);
-		clp.clientLoginMethod ("hadeera00.1@gmail.com", "123456");
+		clp.clientLoginMethod (username, password);
 		driver.manage().window().maximize();
 		Thread.sleep(10000);
 	}

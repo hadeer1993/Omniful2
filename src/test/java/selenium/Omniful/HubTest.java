@@ -6,14 +6,14 @@ import org.testng.annotations.Test;
 public class HubTest extends TestBases {
 	@BeforeTest
 	public void openbrowser() {
-		OpenChrome("https://osama.dashboard-omniful-stage.ibtikar.sa/");
+		OpenChrome(base_url);
 	}
 	@Test(priority=1)
-	public void HubMethod() throws InterruptedException {
+	public void OpenShippingMethod() throws InterruptedException {
 		ClientLoginPage clp=new ClientLoginPage(driver);
-		clp.clientLoginMethod ("asmaa0abd.elkerim@gmail.com", "123456");
-	     driver.manage().window().maximize();
-	     Thread.sleep(10000);
+		clp.clientLoginMethod (username, password);
+		driver.manage().window().maximize();
+		Thread.sleep(10000);
 		ClientHomePage chp=new ClientHomePage(driver);
 		chp.OpenHubsPage();
 		Thread.sleep(10000);

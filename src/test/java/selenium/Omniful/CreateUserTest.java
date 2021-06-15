@@ -23,17 +23,15 @@ public class CreateUserTest extends TestBases{
 	}
 	
 	@BeforeTest
-	public void OpenBrowser() throws InterruptedException {
-		OpenChrome("https://osama.dashboard-omniful-stage.ibtikar.sa/");
-		driver.manage().window().maximize();
-		Thread.sleep(10000);
+	public void openbrowser() {
+		OpenChrome(base_url);
 	}
 	@Test(priority=1)
-	public void Login() throws InterruptedException {
-		ClientLoginPage clp = new ClientLoginPage(driver);
-		clp.clientLoginMethod("asmaa0abd.elkerim@gmail.com", "123456");
+	public void OpenShippingMethod() throws InterruptedException {
+		ClientLoginPage clp=new ClientLoginPage(driver);
+		clp.clientLoginMethod (username, password);
+		driver.manage().window().maximize();
 		Thread.sleep(10000);
-				
 	}
 	@Test(priority=2)
 	public void OpenUserPage() throws InterruptedException {
@@ -51,21 +49,21 @@ public class CreateUserTest extends TestBases{
 	public void NewUser(String name, String email, String pn) throws InterruptedException {
 	    CreateUserPage Cup = new CreateUserPage(driver);
 	    Cup.CreateNewUser(name,email,pn);
-	    Thread.sleep(1000);
+	    Thread.sleep(5000);
 	    
 	    Cup.SelectRoleDDL();
 	    ClickEnterAction();
-	    Thread.sleep(1000);
-	    
+	    Thread.sleep(10000);
+
 	    Cup.SelectHubDDL();
 	    ClickEnterAction();
-	    Thread.sleep(1000);
-	    
+	    Thread.sleep(10000);
+	  
 	    Cup.CreateUser();
-	    Thread.sleep(5000);
+	    Thread.sleep(10000);
 
 	    //assertEquals(true,Cup.getMessage(), Validationmsg);
-	    driver.navigate().to("https://osama.dashboard-omniful-stage.ibtikar.sa/users/create-user");
+	   // driver.navigate().to("https://osama.dashboard-omniful-stage.ibtikar.sa/users/create-user");
 	    Thread.sleep(1000);
 	}
 }

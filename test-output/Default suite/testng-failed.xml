@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.Omniful.myFirstRestAssuredClass">
+      <class name="selenium.Omniful.ClientTest">
         <methods>
-          <include name="getResponseBody"/>
+          <include name="OpenSideMenu"/>
+          <include name="TestClient"/>
+          <include name="openbrowser"/>
+          <include name="OpenShippingMethod"/>
         </methods>
-      </class> <!-- selenium.Omniful.myFirstRestAssuredClass -->
+      </class> <!-- selenium.Omniful.ClientTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

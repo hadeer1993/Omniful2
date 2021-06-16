@@ -12,7 +12,7 @@ public class ImportLocationQuantityTest extends TestBases {
 		clp.clientLoginMethod (username, password);
 		driver.manage().window().maximize();
 		Thread.sleep(10000);
-	     driver.navigate().to("https://osama.dashboard-omniful-stage.ibtikar.sa/inventory/importing");
+	     driver.navigate().to(base_url+"inventory/importing");
 	     Thread.sleep(10000);
 	}
 	     @Test(priority=2)

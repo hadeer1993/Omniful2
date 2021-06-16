@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class SoldQTYPage extends PageBases {
+public class ReturnQTYPage extends PageBases {
 
-	public SoldQTYPage(WebDriver driver) {
+	public ReturnQTYPage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
@@ -16,19 +16,19 @@ public class SoldQTYPage extends PageBases {
 	@FindBy(id="react-select-2-input")
 	WebElement HubTxt;
 	
-	@FindBy(xpath="//*[@id=\"quantity -144\"]/div[1]/input")
+	@FindBy(xpath="//*[@id=\"quantity -104\"]/div[1]/input")
 	WebElement QuantityTxT;
 	
-	@FindBy(id="Location-suggestion -144")
+	@FindBy(id="Location-suggestion -104")
 	WebElement LocationDDL;
 	
-	@FindBy(id="react-select-3-input")
+	@FindBy(id="react-select-20-input")
 	WebElement LocationtxT;
 	
-	@FindBy(id="Confirm -144")
+	@FindBy(id="Confirm -104")
 	WebElement Confirmbtn;
 	
-	@FindBy(id="Discard -144")
+	@FindBy(id="Discard -104")
 	WebElement Discardbtn;
 	
 	public void SelectHub() {

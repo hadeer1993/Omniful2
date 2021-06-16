@@ -65,6 +65,11 @@ public class ClientHomeTest extends TestBases {
 		chp.OpenShipping();
 		Thread.sleep(10000);
 	}
+	@Test(priority=9)
+	public void OpenSoldQTYScreen() throws InterruptedException {
+		ClientHomePage chp=new ClientHomePage(driver);
+		chp.OpenInventory();
+		Thread.sleep(10000);
 
-
+	}
 }
